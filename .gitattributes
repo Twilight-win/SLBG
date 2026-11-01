@@ -1,0 +1,6 @@
+* text=auto
+*.onnx binary
+*.wasm binary
+*.task binary
+*.jpg binary
+*.png binary

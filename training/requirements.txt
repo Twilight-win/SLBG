@@ -1,0 +1,9 @@
+# 训练环境专用（环境 B）。装进 .venv/training，不要装到系统 Python。
+# 这套依赖有 2 GB+，和站点服务（零依赖）、工具脚本（Node / opencv）严格隔离。
+ultralytics>=8.3,<9
+torch>=2.1
+torchvision>=0.16
+onnx>=1.15
+onnxsim>=0.4
+onnxruntime>=1.17
+PyYAML>=6.0

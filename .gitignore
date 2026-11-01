@@ -1,0 +1,31 @@
+# ── 采集与中间产物（含人脸/隐私，默认不入库） ──────────────
+data/captures/
+data/tmp/
+data/*.log
+
+# ── 训练环境（体积巨大） ─────────────────────────────────
+.venv/
+venv/
+training/runs/
+training/.venv/
+*.pt
+*.onnx.bak
+
+# ── 系统与编辑器 ────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# ── Node / Python 缓存 ─────────────────────────────────
+__pycache__/
+*.pyc
+node_modules/
+
+# ── 临时素材（未确认授权的真人照片/视频不要提交） ─────────
+app/assets/tmp/
+*.tmp.jpg
+
+# ── 工作区辅助目录 ───────────────────────────────────
+.workbuddy/

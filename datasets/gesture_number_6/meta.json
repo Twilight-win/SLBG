@@ -1,0 +1,16 @@
+{
+  "signId": "number-6",
+  "word": "六",
+  "pinyin": "liù",
+  "kind": "static",
+  "signers": ["S001"],
+  "source": "web-capture",
+  "license": "CC BY-SA 4.0",
+  "notes": "官方 YOLO 当前唯一类别。拇指与小指伸直形成夹角，其余三指自然弯曲。样本待社区补充，目标 ≥ 30 张 / ≥ 3 位拍摄者。站内示范图（app/assets/img/example_number_6_a.jpg）授权记录见同目录 CONSENT.md，该图不适用 CC BY-SA 再许可。",
+  "tips": [
+    "拇指和小指尽量伸直，两根手指形成明显夹角。",
+    "手离镜头 40–60 cm，避免逆光。",
+    "掌心或手背朝向镜头都可以，关键是手指完整入镜。"
+  ],
+  "images": []
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "slbg-model-manifest/1",
+  "name": "gesture6-yolov8n",
+  "version": "0.1.0",
+  "task": "detect",
+  "model": "best.onnx",
+  "trainedAt": "2025-10-10",
+  "source": "ultralytics 8.3.163 / gesture6_datasets",
+
+  "input": {
+    "name": "images",
+    "width": 320,
+    "height": 320,
+    "layout": "NCHW",
+    "letterbox": true,
+    "pad": 114,
+    "normalize": "0-1",
+    "color": "RGB"
+  },
+
+  "output": {
+    "name": "output0",
+    "layout": "CHW",
+    "attrs": 5
+  },
+
+  "classes": [
+    {
+      "id": 0,
+      "name": "gesture_6",
+      "signId": "number-6",
+      "zh": "数字 6",
+      "kind": "static"
+    }
+  ],
+
+  "thresholds": {
+    "score": 0.35,
+    "iou": 0.45,
+    "holdMs": 1200
+  },
+
+  "metrics": {
+    "precision": null,
+    "recall": null,
+    "map50": null,
+    "map50_95": null,
+    "valImages": 72,
+    "valLabels": 11
+  },
+
+  "notes": "单类别手势检测模型。输入 320x320 letterbox，输出 [1,5,2100]（4 框坐标 + 1 类别分数）。当前只认识「数字 6」，站点所有 AI 判定类玩法都严格以本文件的 classes 为准，不会凭词库臆造类别。替换新模型时只需更新本文件 + best.onnx。"
+}

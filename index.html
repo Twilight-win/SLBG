@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f1a21">
+<title>Sign Language-Based Game · 手语游戏站</title>
+<meta name="description" content="Sign Language-Based Game：浏览器端深度学习手语游戏站。YOLOv8 手型检测 + MediaPipe 关键点 + 端侧小模型训练，数据不出设备，打开网页就能玩。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f1a21'/%3E%3Cpath d='M22 44V26a3 3 0 0 1 6 0v8-14a3 3 0 0 1 6 0v14-11a3 3 0 0 1 6 0v13-8a3 3 0 0 1 6 0v14c0 8-5 13-13 13-6 0-9-3-11-7z' fill='%236ee7b7'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="./app/css/app.css">
+<!-- ONNX Runtime Web：必须先于 module 脚本加载，提供全局 ort -->
+<script src="./app/vendor/ort/ort.wasm.min.js"></script>
+</head>
+<body>
+<div class="boot" id="boot">
+  <div class="boot-hand">✋</div>
+  <div class="boot-title">Sign Language-Based Game</div>
+  <div class="boot-sub">正在装配手势引擎…</div>
+</div>
+
+<div class="shell" id="shell" hidden>
+  <aside class="sidebar">
+    <a class="brand" href="#/home">
+      <span class="brand-mark">✋</span>
+      <span class="brand-text"><b>SLBG</b><small>Sign Language-Based Game</small></span>
+    </a>
+    <nav class="nav" id="side-nav" aria-label="主导航"></nav>
+    <div class="side-card">
+      <div class="side-card-kicker">模型只认识 1 个类？</div>
+      <div class="side-card-title">去词工坊<br>解锁更多手型</div>
+      <a class="side-card-link" href="#/workshop">进入词工坊 →</a>
+    </div>
+    <div class="side-foot"><span class="dot"></span> 浏览器内推理 · 数据不出设备</div>
+  </aside>
+
+  <main class="main" id="main">
+    <header class="topbar">
+      <button class="icon-btn only-mobile" id="menu-btn" aria-label="打开菜单">☰</button>
+      <div class="topbar-title" id="topbar-title">首页</div>
+      <div class="topbar-right">
+        <span class="pill pill-soft" id="model-pill"><i class="dot"></i> 引擎待命</span>
+        <a class="avatar" href="#/me" aria-label="我的">我</a>
+      </div>
+    </header>
+    <div class="view" id="view" tabindex="-1"></div>
+    <footer class="footer">
+      <span>Sign Language-Based Game（SLBG）· 开源手语学习游戏</span>
+      <span class="footer-dot">·</span>
+      <span>非商业用途 · 尊重手语使用者与出镜者</span>
+    </footer>
+  </main>
+
+  <nav class="tabbar" id="tabbar" aria-label="底部导航"></nav>
+</div>
+
+<div class="toast-wrap" id="toast-wrap" aria-live="polite"></div>
+<div class="modal-root" id="modal-root"></div>
+
+<script type="module" src="./app/js/main.js"></script>
+</body>
+</html>
